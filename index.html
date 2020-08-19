@@ -1,4 +1,15 @@
+
+
+
+
+
+
+
+
+
 // Specs - Increasing comlexity 
+
+
 // If a word starts with a vowel ("aeiou") add "way" to the end of that word.
   // Describe: `pigLatin()`
   // Test: "It will add 'way' to the end of words that begin with a vowel"
@@ -9,6 +20,13 @@
     Test: "It will add move consecutive starting consonants to the end of the word, and add 'ay'
     Expect:(pigConsonants("hi")).toEqual("ihay")
     
-  // If the first consonants include "qu", move the "u" along with the "q". Don't forget about words like "squeal" where "qu" doesn't come first!
-
+ 
   // For words beginning with "y", treat "y" as a consonant.
+    Describe: yWords()
+    Test: "It will treat "y" as a consonant if the word begins with "y".
+    Expect:(yWords("yummy")).toEqual("ummyay");
+
+    // If the first consonants include "qu", move the "u" along with the "q". Don't forget about words like "squeal" where "qu" doesn't come first!
+    Describe:`pigQu()`
+    Test: It will move "qu" and any other consonants before the "qu" to the back of the word and add "ay".
+    Expect: pigQu("squeal").toEqual("ealsquay")
