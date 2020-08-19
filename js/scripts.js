@@ -13,18 +13,32 @@ function pigVowel(word) {
     return yFinal;}
     
 
+    
+    
+    
+    
     function pigConsonants(word) {
-      let consArr = [];
-      if (word.charAt(0) != ('a' || 'e' || "i" || "o" || "u" || "y"));
-      for (let 1=0; i < consArr.length; i++) {
-        
+      let consArray = word.split("");
+      for (let i=0; i < consArray.length; i++) {
+        if (consArray[i] != (/[aeiouy]/gi)) {
+          consArray.push(consArray[i]);
+          let consGone = [consArray.shift()];
+          consFinal = consArray.join("");
+        }
       }
+      return consFinal;
+    }
       
-      let consArr = word.split("");
-      let yGone = [yArr.shift()];
-       yArr.push("y", "a", "y");
-       yFinal = yArr.join("");
-      return yFinal;}
+    
+
+      
+    
+    
+    
+    
+      
+        
+        }
 
     }
 }
